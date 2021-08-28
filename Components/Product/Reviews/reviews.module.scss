@@ -1,0 +1,73 @@
+@import "styles/variables";
+
+.reviews{
+  margin: 1rem 0 2rem 0;
+
+  h2{
+    margin: 1rem 0;
+  }
+
+  .allReviews{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+
+    .review{
+      padding: 2rem;
+      background: #E4E4E9;
+      border-radius: 20px;
+
+
+      .upper{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+        .commas{
+          display: inline-grid;
+          width: 60px;
+          height: 60px;
+          position: relative;
+          color: $grey;
+          z-index: 0;
+
+          &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background-image: url("/review.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            z-index: 1;
+          }
+
+          p{
+            z-index: 2;
+            font-family: 'Coustard', serif;
+            font-size: 3rem;
+            margin: -50px 0 0 -50px;
+            padding: 0;
+            transform: translate(-12px, -10px) rotate(180deg);
+            user-select: none;
+          }
+        }
+
+        .name{
+          align-self: center;
+
+          h3{
+            font-size: 16px;
+            margin: 0;
+          }
+
+          p{
+            color: #feaf44;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

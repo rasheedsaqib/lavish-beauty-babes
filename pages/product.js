@@ -1,7 +1,9 @@
+import {default as ProductPage} from '../Components/Product/product';
+
 const Product = props => {
     return(
         <div>
-            1
+            <ProductPage />
         </div>
     )
 }
