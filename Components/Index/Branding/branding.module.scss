@@ -1,0 +1,29 @@
+@import "styles/variables";
+
+.branding{
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 0;
+  margin: 4rem 0 2rem 0;
+
+  .logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 1;
+  }
+
+  .brandImg{
+    height: 380px;
+    z-index: 2;
+  }
+}

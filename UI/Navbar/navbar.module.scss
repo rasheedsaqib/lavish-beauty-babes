@@ -1,0 +1,86 @@
+@import "styles/variables";
+
+.nav{
+  background: $pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+
+  .logo{
+    height: 30px;
+  }
+
+  ul{
+    list-style: none;
+    display: flex;
+
+    li{
+      margin: 0 0.7rem;
+      transition: opacity 1s ease;
+
+      &:hover{
+        opacity: 0.7;
+      }
+
+      a{
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .account{
+    display: flex;
+    align-items: center;
+
+    span{
+      font-size: 1.2rem;
+      margin-right: 1rem;
+    }
+
+    *{
+      cursor: pointer;
+    }
+
+    .cart{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      margin-right: 1rem;
+
+      .icon{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: $grey;
+        color: $text;
+        font-size: 0.8rem;
+      }
+
+      .total{
+        position: absolute;
+        top: -15px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        background: #F3ADD1;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .dp{
+      width: 40px;
+      height: 40px;
+      background-size: 100%;
+      border-radius: 50%;
+    }
+  }
+}

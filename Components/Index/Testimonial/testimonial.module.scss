@@ -1,0 +1,168 @@
+@import "../../../styles/variables";
+
+.heading{
+  font-size: 24px;
+  color: $text;
+  margin: 4rem 0 0 0;
+}
+
+.testimonial{
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 'image review';
+  color: $text;
+
+  .image{
+    grid-area: image;
+    margin: 0 40px 0 0;
+    align-self: center;
+    position: relative;
+    width: 340px;
+    height: 340px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    .layer{
+      width: 100%;
+      height: 100%;
+      background: $pink;
+      opacity: 0.2;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    img{
+      width: 340px;
+      height: 340px;
+      overflow: hidden;
+    }
+  }
+
+  .review{
+    grid-area: review;
+    margin-left: 40px;
+
+    .commas{
+      display: inline-grid;
+      font-family: 'Coustard', serif;
+      color: $pink;
+      font-size: 5rem;
+      margin: -50px 0 0 0;
+      padding: 0;
+      transform: rotate(180deg);
+      user-select: none;
+    }
+
+    h1{
+      font-weight: bold;
+      font-size: 30px;
+      width: 90%;
+      margin: 0;
+    }
+
+    .client{
+
+      .clientImage{
+        display: none;
+      }
+
+      h2{
+        font-weight: 800;
+        font-size: 22px;
+        color: $pink;
+        margin-bottom: 0;
+      }
+
+      .role{
+        font-weight: 300;
+        font-size: 14px;
+        margin: 0;
+      }
+
+    }
+
+    .dots{
+      margin: 3rem 0 0 5px;
+      display: flex;
+
+      .dot{
+        height: 15px;
+        width: 15px;
+        background: $text;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: 0.4s ease;
+      }
+
+      .active{
+        width: 100px;
+        background: $pink;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial{
+    grid-template-columns: 1fr;
+    grid-template-areas: 'review' 'image';
+
+    .image{
+      display: none;
+    }
+
+    .review{
+      margin: 0;
+      .client{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+
+        .clientImage{
+          display: block;
+          width: 100px;
+          height: 100px;
+          border-radius: 100px;
+          background-size: 100%;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .testimonial{
+
+    .review{
+
+      .commas{
+        font-size: 3rem;
+      }
+
+      h1{
+        font-size: 24px;
+      }
+
+      .client{
+
+        .clientImage{
+          width: 80px;
+          height: 80px;
+        }
+
+        h2{
+          font-size: 18px;
+        }
+
+        .role{
+          font-size: 14px;
+        }
+
+      }
+    }
+  }
+}

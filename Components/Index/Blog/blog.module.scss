@@ -1,0 +1,16 @@
+@import "styles/variables";
+
+.blog{
+  margin: 2rem 0;
+  color: $text;
+
+  h2{
+    font-size: 24px;
+  }
+
+  .posts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}

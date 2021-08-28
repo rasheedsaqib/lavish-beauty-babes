@@ -1,0 +1,36 @@
+@import "styles/variables";
+
+.feed {
+  margin: 2rem 0;
+  color: $text;
+
+  .posts{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -0.5rem;
+
+    .post{
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      margin: 0.5rem;
+      cursor: pointer;
+
+      .layer{
+        width: 100%;
+        height: 100%;
+        background-size: $pink;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      img{
+        z-index: +1;
+        width: 100%;
+      }
+    }
+  }
+}
