@@ -26,7 +26,7 @@ const Testimonial = props => {
                         </div>
                         <div className={styles.review}>
                             <br />
-                            <p className={styles.commas}>''</p>
+                            <p className={styles.commas}>&apos;&apos;</p>
                             <h1>{reviews[active].review}</h1>
                             <div className={styles.client}>
                                 <div className={styles.clientImage} style={{backgroundImage: 'url("' + reviews[active].image + '")'}} />

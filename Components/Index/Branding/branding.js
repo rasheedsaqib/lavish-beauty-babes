@@ -5,7 +5,7 @@ const Branding = props => {
     return(
         <div className={styles.branding} >
             <div className={styles.logo} style={{backgroundImage: 'url("/logo2.png")'}} />
-            <img className={styles.brandImg} src='/branding.png' />
+            <img className={styles.brandImg} src='/branding.png' alt='Branding' />
         </div>
     )
 }

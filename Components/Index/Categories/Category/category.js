@@ -1,5 +1,6 @@
-import styles from './category.module.scss';
 import Link from "next/link";
+
+import styles from './category.module.scss';
 
 const Category = props => {
     return(
@@ -9,7 +10,7 @@ const Category = props => {
                 <p>Organic Ingredients</p>
                 <Link href='/'><a>View Products</a></Link>
             </div>
-            <img className={styles.catImg} src='/cat-1.png' />
+            <img className={styles.catImg} src='/cat-1.png' alt='Category' />
         </div>
     )
 }

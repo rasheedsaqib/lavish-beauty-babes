@@ -7,7 +7,7 @@ const Experience = props => {
     return(
         <div className={styles.experience}>
             <div className={styles.image}>
-                <Image src='/experience.png' width={500} height={448} />
+                <Image src='/experience.png' width={500} height={448} alt={'experience'} />
                 <div className={styles.review}>
                     <p>How was your experience?</p>
                     <p className={styles.emoji}> <span>😡</span> <span>😢</span> <span>😊</span> <span>😃</span> <span>😘</span></p>
