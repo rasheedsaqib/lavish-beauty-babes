@@ -10,29 +10,35 @@ const Navbar = () => {
 
     return(
         <div className={toggle ? styles.nav + ' ' + styles.navActive : styles.nav}>
-            <img className={styles.logo} src='/logo.png' />
+            <div className={styles.logo}><Link href='/'><a><img src='/logo.png' /></a></Link></div>
 
             <span onClick={()=>setToggle(!toggle)} className={styles.hamburger}>{toggle ? <i className="fas fa-times" /> : <i className="fas fa-bars" />}  </span>
 
+            <div className={styles.logo2}><Link href='/'><a><img src='/logo.png' /></a></Link></div>
+
             <ul>
-                <li>
-                    <Link href='/'><a>Shop</a></Link>
+                <li onClick={()=>setToggle(false)}>
+                    <Link href='/'><a>Lips</a></Link>
                 </li>
 
-                <li>
-                    <Link href='/'><a>Reviews</a></Link>
+                <li onClick={()=>setToggle(false)}>
+                    <Link href='/'><a>Eyes</a></Link>
                 </li>
 
-                <li>
-                    <Link href='/'><a>Blog</a></Link>
+                <li onClick={()=>setToggle(false)}>
+                    <Link href='/'><a>Face</a></Link>
                 </li>
 
-                <li>
-                    <Link href='/'><a>FAQ</a></Link>
+                <li onClick={()=>setToggle(false)}>
+                    <Link href='/'><a>Skincare</a></Link>
                 </li>
 
-                <li>
-                    <Link href='/'><a>About</a></Link>
+                <li onClick={()=>setToggle(false)}>
+                    <Link href='/'><a>Sportswear</a></Link>
+                </li>
+
+                <li onClick={()=>setToggle(false)}>
+                    <Link href='/'><a>Contact</a></Link>
                 </li>
             </ul>
 
@@ -42,7 +48,7 @@ const Navbar = () => {
                     <span className={styles.icon}> <i className="fas fa-shopping-cart" /> </span>
                     <p className={styles.total}> 5 </p>
                 </div>
-                <div className={styles.dp} style={{backgroundImage: 'url("/dp.jpg")'}} />
+                {/*<div className={styles.dp} style={{backgroundImage: 'url("/dp.jpg")'}} />*/}
             </div>
         </div>
     )
