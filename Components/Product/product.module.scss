@@ -160,6 +160,10 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
 
+        .allProducts > div:nth-child(4){
+            display: none;
+        }
+
     }
 }
 
@@ -175,6 +179,10 @@
 
         .allProducts{
             grid-template-columns: 1fr 1fr;
+        }
+
+        .allProducts > div:nth-child(3), .allProducts > div:nth-child(4){
+            display: none;
         }
 
     }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from './footer.module.scss';
 import withWidth from "../../HOC/withWidth/withWidth";
 
@@ -7,7 +9,7 @@ const Footer = props => {
 
             <div className={styles.columns}>
                 <div className={styles.column}>
-                    <img src='/logo.png' />
+                    <Link href='/'><a><img src='/logo.png' /></a></Link>
                     <p>Lorem ipsum dolor sit amet, consectetur <br />
                         adipiscing,  sed do eius mod tempor <br />
                         incididunt ut labore.</p>
@@ -16,9 +18,9 @@ const Footer = props => {
                 <div className={styles.column}>
                     <h3>Weekly Top Chart</h3>
                     <ul>
-                        <li>Quratulain Balouch</li>
-                        <li>Sidhu Moose Wala</li>
-                        <li>Taylor Swift </li>
+                        <li>Lips</li>
+                        <li>Rose</li>
+                        <li>Skin</li>
                     </ul>
                 </div>
 
