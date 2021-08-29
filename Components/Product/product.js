@@ -1,20 +1,27 @@
+import {useState} from "react";
+
 import styles from './product.module.scss';
 import withWidth from "../../HOC/withWidth/withWidth";
 import Reviews from "./Reviews/reviews";
 import {default as SingleProduct} from '../../UI/Product/product';
 
 const Product = props => {
+
+    const [quantity, setQuantity] = useState(1);
+
     return(
         <div className={styles.product}>
             <div className={styles.top}>
-                <img src='/scrub.png' />
+                <div className={styles.image}>
+                    <img src='/scrub.png' />
+                </div>
                 <div className={styles.text}>
                     <h1>Strawberry Sugar Scrub</h1>
                     <p>$15.00</p>
                     <div className={styles.total}>
-                        <p className={styles.sub}>-</p>
-                        <p>1</p>
-                        <p className={styles.add}>+</p>
+                        <p onClick={()=>setQuantity(quantity !== 1 ? quantity-1 : quantity)} className={styles.sub}>-</p>
+                        <p>{quantity}</p>
+                        <p onClick={()=>setQuantity(quantity+1)} className={styles.add}>+</p>
                     </div>
                     <div className={styles.buttons}>
                         <button>Add to Cart</button>

@@ -14,3 +14,33 @@
     grid-gap: 1rem;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .blog{
+
+    .posts{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog{
+
+    .posts{
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blog{
+
+    .posts{
+      grid-template-columns: 1fr;
+    }
+
+  }
+}

@@ -9,19 +9,76 @@
   border-radius: 20px;
   width: 100%;
   cursor: pointer;
+  height: 330px;
+  transition: padding 0.4s ease;
+  overflow: hidden;
 
   img{
     height: 200px;
+    transition: height 0.4s ease;
   }
 
   h3{
     font-size: 18px;
     margin-bottom: 0;
+    text-align: center;
   }
 
   p{
     font-size: 14px;
     margin: 0;
+    text-align: center;
+  }
+
+  .stars{
+    color: #feaf44;
+    margin: 0.4rem 0;
+    display: none;
+  }
+
+  button{
+    display: none;
+    border: 2px solid $pink;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3rem;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.4s ease;
+    background: $pink;
+    color: $grey;
+
+    &:hover{
+      background: none;
+      color: $pink;
+    }
+  }
+
+  &:hover{
+    padding: 1.4rem;
+
+    img{
+      height: 150px;
+    }
+
+    .stars, button{
+      display: block;
+    }
+
+    h3{
+      margin: 0.3rem 0;
+    }
+
+    p, .stars{
+      margin: 0 0 0.3rem 0;
+      opacity: 1;
+    }
+
+    button{
+      margin: 0.3rem 0 0 0;
+      opacity: 1;
+    }
   }
 
 }

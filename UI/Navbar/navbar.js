@@ -1,11 +1,18 @@
+import {useState} from "react";
+
 import styles from './navbar.module.scss';
 import withWidth from "../../HOC/withWidth/withWidth";
 import Link from "next/link";
 
 const Navbar = () => {
+
+    const [toggle, setToggle] = useState(false);
+
     return(
-        <div className={styles.nav}>
+        <div className={toggle ? styles.nav + ' ' + styles.navActive : styles.nav}>
             <img className={styles.logo} src='/logo.png' />
+
+            <span onClick={()=>setToggle(!toggle)} className={styles.hamburger}>{toggle ? <i className="fas fa-times" /> : <i className="fas fa-bars" />}  </span>
 
             <ul>
                 <li>

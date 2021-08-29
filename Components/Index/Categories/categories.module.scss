@@ -4,3 +4,15 @@
   grid-gap: 1rem;
   margin: 2rem 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .categories{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .categories{
+    grid-template-columns: 1fr;
+  }
+}

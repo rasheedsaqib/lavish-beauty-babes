@@ -6,9 +6,12 @@
   background: $pink;
   border-radius: 20px;
   display: flex;
+  overflow: hidden;
   position: relative;
 
   .text{
+    z-index: +2;
+
     h3{
       font-size: 20px;
       margin: 0;
@@ -26,9 +29,18 @@
   }
 
   .catImg{
+    z-index: +1;
     height: 200px;
     position: absolute;
     right: 0;
     bottom: 0;
+    transition: 0.4s ease;
+  }
+
+  &:hover{
+    .catImg{
+      height: 220px;
+      margin: 0 -20px -20px 0;
+    }
   }
 }

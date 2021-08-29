@@ -8,7 +8,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        img{
+        .image img{
             height: 360px;
         }
 
@@ -37,12 +37,13 @@
                 .add, .sub{
                     font-size: 20px;
                     cursor: pointer;
+                    user-select: none;
                 }
             }
 
             .buttons{
                 display: flex;
-                margin: 1rem 0;
+                flex-wrap: wrap;
 
                 button{
                     border: 2px solid $pink;
@@ -51,7 +52,7 @@
                     font-size: 14px;
                     font-weight: bold;
                     outline: none;
-                    margin: 0 1rem 0 0;
+                    margin: 1rem 1rem 1rem 0;
                     cursor: pointer;
                     transition: background 0.4s ease;
                 }
@@ -90,6 +91,7 @@
 
     .share{
         display: flex;
+        flex-wrap: wrap;
         color: $grey;
         margin: 1rem 0;
 
@@ -97,6 +99,7 @@
             margin-right: 1.2rem;
             padding: 0.6rem 1rem;
             cursor: pointer;
+            transition: 0.4s ease;
 
             span{
                 margin-right: 0.5rem;
@@ -105,14 +108,32 @@
 
         .fb{
             background: #3A559F;
+            border: 2px solid #3A559F;
+
+            &:hover{
+                background: none;
+                color: #3A559F;
+            }
         }
 
         .insta{
             background: #AC398A;
+            border: 2px solid #AC398A;
+
+            &:hover{
+                background: none;
+                color: #AC398A;
+            }
         }
 
         .tweet{
             background: #0896DF;
+            border: 2px solid #0896DF;
+
+            &:hover{
+                background: none;
+                color: #0896DF;
+            }
         }
     }
 
@@ -120,5 +141,73 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .product{
+
+        .top{
+            grid-template-columns: 1fr;
+
+            .image{
+                justify-self: center;
+                margin: 0 0 2rem 0;
+            }
+        }
+
+        .allProducts{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product{
+
+        .top{
+            .image img{
+                width: 80%;
+                height: auto;
+            }
+        }
+
+        .allProducts{
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .product{
+
+        .allProducts{
+            grid-template-columns: 1fr;
+        }
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .product{
+        .top .text{
+            h1{
+                font-size: 28px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+
+        h2{
+            font-size: 20px;
+        }
+
+        .description{
+            font-size: 14px;
+        }
     }
 }

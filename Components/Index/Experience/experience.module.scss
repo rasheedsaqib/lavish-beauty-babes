@@ -44,3 +44,27 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .experience{
+    grid-template-columns: 1fr;
+
+    .text{
+      margin: 2rem 0 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .experience{
+
+    .text{
+      h1{
+        font-size: 28px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+}
